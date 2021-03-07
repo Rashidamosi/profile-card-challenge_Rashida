@@ -1,0 +1,163 @@
+:root{
+    --cyan: hsl(185, 75%, 39%); /*Dark*/
+               --blue: hsl(229, 23%, 23%); /*Very dark desaturated*/
+               --blue-gray: hsl(227, 10%, 46%); /*Dark grayish*/
+   }
+
+/* reset */
+body{
+    margin:0;
+    padding:0;
+    text-decoration: none;  
+}
+
+body{
+    background: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-position:left top, bottom right;
+    background-repeat: no-repeat, no-repeat;
+    background-size:contain;
+    background-color: var(--cyan);
+    /* overflow-x: hidden; check this again */
+    font-family: Kumbh Sans;
+    /* font-weight: 700; */
+    /* Font size (name and stats): 18px */
+}
+
+@font-face{
+    font-family:'Kumbh Sans';
+    src: url('fonts/KumbhSans-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face{
+    font-family:'Kumbh Sans';
+    src: url('fonts/KumbhSans-Bold.ttf');
+    font-weight: 700;
+}
+
+h1, h2 {
+    font-size:18px;
+    margin:0;
+    padding:0;
+    font-family:Kumbh Sans;
+    font-weight: 700;
+}
+
+span{
+    font-size:18px;
+    margin:0;
+    padding:0;
+    font-family:Kumbh Sans;
+    font-weight: 400;
+}
+
+h2{
+    font-size:12px;
+    margin:0;
+    padding:0;
+    font-family:Kumbh Sans;
+    font-weight: 400;
+}
+/* 
+.profile{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    gap: 10px;
+} */
+
+/*helped display the profile content to the centre*/
+#profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  /*class for content in the section*/
+  .content{
+      background-color: #fff;
+      border-radius: 4%;
+      text-align: center;
+      max-width: 90%;
+      overflow: hidden; /*hides the background image*/
+  }
+
+  .london{
+      position:relative;
+      bottom: 2.3rem;
+  }
+
+  /*for the stat styling*/
+  .stat{
+      display: flex; /*to display next to each other*/
+      position: relative;
+      bottom: 2.5rem; 
+      justify-content: center;
+      gap: 55px;  /*space btw stat*/
+      padding-top: 5%; /*to give a little space from the top*/
+  }
+
+  .stat-below{    
+      padding-top: 20%;
+  }
+
+  /*for the profile picture*/
+  .profile{
+    position: relative;
+      border-radius: 50%;
+      bottom: 3.3rem;
+      text-align: center;
+      border: 3px solid #fff;
+  }
+
+  /*responds by changing color and border size when you hover on the profile*/
+  .profile:hover{
+    border: 5px solid var(--cyan);
+  }
+
+  .name{                      /*Got my name in place, and the corect position*/
+    position: relative;
+    bottom: 2.9rem;
+
+  }
+
+
+  /*to style hr*/
+  hr{
+    position: relative;
+    bottom: 2.5rem;
+  }
+
+/*To give other texts a lighter colour*/
+  span,.london,.stat-below{
+      color: var(--blue-gray);
+  }
+
+  .attribution { font-size: 11px; text-align: center; }
+  .attribution a { color: hsl(228, 45%, 44%); }
+
+/* 
+.square{
+    height: 400px;
+  width: 400px;
+  background-color: #fff;
+  padding-top: 5%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2%;
+ background: url(images/bg-pattern-card.svg);
+  background-repeat: no-repeat;
+  background-position: top; 
+} */
+
+
+/* for responsive design and adjustments for different screen sizes/
+
+  /*desktop styles*/
+@media screen and (min-width: 1400px){
+    body{
+        background-size:cover;
+}
+}
